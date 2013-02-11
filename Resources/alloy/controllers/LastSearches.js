@@ -21,6 +21,7 @@ function Controller() {
         for (var x in data) {
             var ob = {
                 title: data[x].attributes.Query + data[x].attributes.Time
+                title: data[x].attributes.Query
             };
             dataFixed.push(ob);
         }

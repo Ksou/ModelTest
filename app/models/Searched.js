@@ -7,8 +7,8 @@ exports.definition = {
 			"Music":"boolean",
 			"Art":"boolean",
 		//	"Time":"datetime",
-			"WikiFound":"boolean" 
-			//"SearchedID" :'INTEGER PRIMARY KEY AUTOINCREMENT'
+			"WikiFound":"boolean", 
+		//	"SearchedID" :'INTEGER PRIMARY KEY AUTOINCREMENT'
 		},
 			"defaults": {
 			"Query":"Q",
@@ -23,7 +23,7 @@ exports.definition = {
 			// defaults to
 			"type": "sql",
 			"collection_name": "Searched" ,
-		//	"idAttribute": "SearchedID" 
+			//"idAttribute": "SearchedID" 
 			//"idAttrivute"
 		}
 	},		

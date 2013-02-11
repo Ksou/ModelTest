@@ -1,9 +1,12 @@
 function Controller() {
     function WikiChange() {
-        var ResetMe = Alloy.Collections.Searched;
-        Alloy.Globals.Artist == "Reset" && ResetMe._reset();
+        var resetAll = !1, ResetMe = Alloy.Collections.Searched;
+        if (Alloy.Globals.Artist == "Reset") {
+            ResetMe._reset();
+            resetAll = !0;
+        }
         debugger;
-        SearchLog();
+        SearchLog(resetAll);
         var FixedArist = Alloy.Globals.Artist.replace(" ", "_");
         debugger;
         $.Wiki.setUrl("http://en.m.wikipedia.org/wiki/" + FixedArist);
@@ -19,8 +22,12 @@ function Controller() {
         (result = !1) && alert(" No Wiki");
         Ti.API.log(result);
     }
-    function SearchLog() {
-        var SearchControl = Alloy.Collections.Searched, Search = Alloy.createModel("Searched", {
+    function SearchLog(reset) {
+        var SearchControl = Alloy.Collections.Searched;
+        SearchControl.fetch();
+        reset && SearchControl.reset();
+        debugger;
+        var Search = Alloy.createModel("Searched", {
             Query: Alloy.Globals.Artist
         });
         SearchControl.add(Search);
