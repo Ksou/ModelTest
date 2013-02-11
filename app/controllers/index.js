@@ -2,7 +2,7 @@ $.index.open();
 // 
 
 //GetSearches = require('controllers/GetSearches') ;
-GetSearches() ; 
+//GetSearches() ; 
 function AlertMe(){
 	
 	alert($.Ace.title) ; 

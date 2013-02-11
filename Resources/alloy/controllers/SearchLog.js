@@ -6,6 +6,8 @@ function Controller() {
         SearchControl.add(Search);
         Search.save();
         SearchControl.fetch();
+        var ASAP = SearchControl.models[0].get("Query");
+        Ti.API.log(ASAP);
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     $model = arguments[0] ? arguments[0].$model : null;

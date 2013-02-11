@@ -1,5 +1,6 @@
 function Controller() {
     function WikiChange() {
+        SearchLog();
         var FixedArist = Alloy.Globals.Artist.replace(" ", "_");
         debugger;
         $.Wiki.setUrl("http://en.m.wikipedia.org/wiki/" + FixedArist);
@@ -9,13 +10,23 @@ function Controller() {
                 Ti.API.log(this.responseText);
             }
         });
-        xhr.open("GET", url);
-        xhr.send();
     }
     function Figure(webText) {
         var result = webText.indexOf("Wikipedia does not have an article with this exact name.");
         (result = !1) && alert(" No Wiki");
         Ti.API.log(result);
+    }
+    function SearchLog() {
+        Alloy.Collections.Searched.reset();
+        var SearchControl = Alloy.Collections.Searched, Search = Alloy.createModel("Searched", {
+            Query: Alloy.Globals.Artist
+        });
+        SearchControl.add(Search);
+        Search.save();
+        SearchControl.fetch();
+        var ASAP = SearchControl.models[SearchControl.length - 1].get("Query");
+        debugger;
+        Ti.API.log(ASAP);
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     $model = arguments[0] ? arguments[0].$model : null;

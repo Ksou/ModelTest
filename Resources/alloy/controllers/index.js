@@ -82,7 +82,6 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     $.index.open();
-    GetSearches();
     _.extend($, exports);
 }
 
