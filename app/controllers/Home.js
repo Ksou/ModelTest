@@ -1,6 +1,12 @@
+
+
 function AddButton (){
+
+if(Alloy.Globals.OS == 'iphone' || Alloy.Globals.OS == 'ipad'){
 $.Win.setRightNavButton(null 	
 );	
+}
+
 $.Win.title = 'Videos about :' + Alloy.Globals.Artist ; 
 
 
@@ -87,14 +93,18 @@ var webView = Ti.UI.createWebView({
 });
 	
 	$.Win.add(webView); 
+	if(Alloy.Globals.OS == 'iphone' || Alloy.Globals.OS == 'ipad'){
 	$.Win.setRightNavButton(
 $.Inbox 	
-);	
+);	}
 	//$.Inbox.visible = true ; 
 	$.Inbox.addEventListener('click' , function(){
 	$.Win.remove(webView) ;
 	//$.Inbox.removeEventLister('click') ;
+	
+	if(Alloy.Globals.OS == 'iphone' || Alloy.Globals.OS == 'ipad'){
 	 $.Win.setRightNavButton(null) ; 
+	}
 	 }
 );
 	debugger ; // get the video URL and add a 

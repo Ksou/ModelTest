@@ -1,6 +1,6 @@
 function Controller() {
     function AddButton() {
-        $.Win.setRightNavButton(null);
+        (Alloy.Globals.OS == "iphone" || Alloy.Globals.OS == "ipad") && $.Win.setRightNavButton(null);
         $.Win.title = "Videos about :" + Alloy.Globals.Artist;
         var SearchString = Alloy.Globals.Artist;
         debugger;
@@ -36,10 +36,10 @@ function Controller() {
             url: "http://www.youtube.com/embed/" + ID + "?autoplay=1&autohide=1&cc_load_policy=0&color=white&controls=0&fs=0&iv_load_policy=3&modestbranding=1&rel=0&showinfo=0"
         });
         $.Win.add(webView);
-        $.Win.setRightNavButton($.Inbox);
+        (Alloy.Globals.OS == "iphone" || Alloy.Globals.OS == "ipad") && $.Win.setRightNavButton($.Inbox);
         $.Inbox.addEventListener("click", function() {
             $.Win.remove(webView);
-            $.Win.setRightNavButton(null);
+            (Alloy.Globals.OS == "iphone" || Alloy.Globals.OS == "ipad") && $.Win.setRightNavButton(null);
         });
         debugger;
     }

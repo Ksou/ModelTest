@@ -20,7 +20,7 @@ function Controller() {
         debugger;
         for (var x in data) {
             var ob = {
-                title: data[x].attributes.Query
+                title: data[x].attributes.Query + data[x].attributes.Time
             };
             dataFixed.push(ob);
         }
@@ -37,7 +37,6 @@ function Controller() {
     }), "Window", null);
     $.addTopLevelView($.__views.LastSearches);
     UpdateForce ? $.__views.LastSearches.on("focus", UpdateForce) : __defers["$.__views.LastSearches!focus!UpdateForce"] = !0;
-    FixBool ? $.__views.LastSearches.on("postlayout", FixBool) : __defers["$.__views.LastSearches!postlayout!FixBool"] = !0;
     $.__views.tableMain = A$(Ti.UI.createTableView({
         id: "tableMain"
     }), "TableView", $.__views.LastSearches);
@@ -46,7 +45,6 @@ function Controller() {
     _.extend($, $.__views);
     var alertGo = !0;
     __defers["$.__views.LastSearches!focus!UpdateForce"] && $.__views.LastSearches.on("focus", UpdateForce);
-    __defers["$.__views.LastSearches!postlayout!FixBool"] && $.__views.LastSearches.on("postlayout", FixBool);
     _.extend($, exports);
 }
 

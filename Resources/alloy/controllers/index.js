@@ -70,7 +70,7 @@ function Controller() {
         id: "__alloyId4"
     });
     $.__views.Settings = A$(Ti.UI.createTab({
-        title: "Settings",
+        title: "Search",
         icon: "images/TabBarSettings.png",
         window: $.__views.__alloyId4.getViewEx({
             recurse: !0

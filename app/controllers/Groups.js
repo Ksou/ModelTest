@@ -32,7 +32,10 @@ var DataUse = TweetFix(Tweets) ;
 $.Twitter.visible = false ; 
 
 TweetsView.setData(DataUse) ; 
-
+TweetsView.addEventListener('click',function(e){
+	
+alert(e.source.title) ; 	
+});
 $.Win.add(TweetsView) ; 
 }
 

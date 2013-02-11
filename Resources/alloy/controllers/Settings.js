@@ -18,13 +18,27 @@ function Controller() {
     $model = arguments[0] ? arguments[0].$model : null;
     var $ = this, exports = {}, __defers = {};
     $.__views.Win = A$(Ti.UI.createWindow({
-        title: "Settings",
+        title: "Search",
         backgroundColor: "#fff",
         id: "Win"
     }), "Window", null);
     $.addTopLevelView($.__views.Win);
+    $.__views.__alloyId7 = A$(Ti.UI.createLabel({
+        width: Ti.UI.SIZE,
+        height: Ti.UI.SIZE,
+        color: "#000",
+        font: {
+            fontSize: 20,
+            fontFamily: "Helvetica Neue"
+        },
+        textAlign: "center",
+        text: "Search here",
+        top: "120dp",
+        id: "__alloyId7"
+    }), "Label", $.__views.Win);
+    $.__views.Win.add($.__views.__alloyId7);
     $.__views.Artist = A$(Ti.UI.createTextField({
-        hintText: "Artist",
+        hintText: "Topic",
         id: "Artist"
     }), "TextField", $.__views.Win);
     $.__views.Win.add($.__views.Artist);

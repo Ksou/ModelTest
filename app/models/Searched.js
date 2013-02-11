@@ -7,7 +7,7 @@ exports.definition = {
 			"Music":"boolean",
 			"Art":"boolean",
 		//	"Time":"datetime",
-			"WikiFound":"boolean" ,
+			"WikiFound":"boolean" 
 			//"SearchedID" :'INTEGER PRIMARY KEY AUTOINCREMENT'
 		},
 			"defaults": {

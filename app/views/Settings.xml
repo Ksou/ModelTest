@@ -1,5 +1,6 @@
 <Alloy>
 	<Window id = 'Win'  >
+	<Label top = '120dp' > Search here   </Label>	
 	<TextField id = 'Artist' onChange = 'ArtistLog' />
 	</Window>
 </Alloy>

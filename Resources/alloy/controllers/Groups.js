@@ -15,6 +15,9 @@ function Controller() {
                 var DataUse = TweetFix(Tweets);
                 $.Twitter.visible = !1;
                 TweetsView.setData(DataUse);
+                TweetsView.addEventListener("click", function(e) {
+                    alert(e.source.title);
+                });
                 $.Win.add(TweetsView);
             } catch (err) {
                 debugger;

@@ -36,7 +36,7 @@ var dataFixed = []	 ;
 //var dataFixed = 	data.toJSON() ;
 	debugger ;
 	for( var x in data){
-	var ob =  {title : data[x].attributes.Query  };//new Object ;	
+	var ob =  {title : data[x].attributes.Query   };//new Object ;	
 	//	ob.title = data[x].attributes.Query ; 
 		 
 	dataFixed.push(ob) ; 

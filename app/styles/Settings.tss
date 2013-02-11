@@ -1,5 +1,5 @@
 "Window": {
-	title : 'Settings', 
+	title : 'Search', 
 	backgroundColor: "#fff"
 },
 "Label": {
@@ -17,6 +17,6 @@
 //backgroundImage : 'images/appBg.png'	
 },
 '#Artist':{
-hintText : 'Artist'	
+hintText : 'Topic'	
 	
 }

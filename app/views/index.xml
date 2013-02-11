@@ -10,7 +10,7 @@
 		
 		<Require src="Profile"/>
 		</Tab>
-		<Tab id = 'Settings' title = 'Settings'>
+		<Tab id = 'Settings' title = 'Search'>
 			<Require src="Settings"/>
 		</Tab>
 					<Tab id = 'Searches' title = 'Searches'>
