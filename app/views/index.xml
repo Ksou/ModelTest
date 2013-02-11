@@ -12,6 +12,9 @@
 		</Tab>
 		<Tab id = 'Settings' title = 'Settings'>
 			<Require src="Settings"/>
-		</Tab>	
+		</Tab>
+					<Tab id = 'Searches' title = 'Searches'>
+			<Require src="LastSearches"/>
+		</Tab>
 	</TabGroup>
 </Alloy>

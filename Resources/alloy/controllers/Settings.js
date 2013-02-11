@@ -23,7 +23,6 @@ function Controller() {
         id: "Win"
     }), "Window", null);
     $.addTopLevelView($.__views.Win);
-    ModelTest ? $.__views.Win.on("click", ModelTest) : __defers["$.__views.Win!click!ModelTest"] = !0;
     $.__views.Artist = A$(Ti.UI.createTextField({
         hintText: "Artist",
         id: "Artist"
@@ -32,7 +31,6 @@ function Controller() {
     ArtistLog ? $.__views.Artist.on("change", ArtistLog) : __defers["$.__views.Artist!change!ArtistLog"] = !0;
     exports.destroy = function() {};
     _.extend($, $.__views);
-    __defers["$.__views.Win!click!ModelTest"] && $.__views.Win.on("click", ModelTest);
     __defers["$.__views.Artist!change!ArtistLog"] && $.__views.Artist.on("change", ArtistLog);
     _.extend($, exports);
 }

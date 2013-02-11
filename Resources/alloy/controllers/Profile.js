@@ -25,13 +25,14 @@ function Controller() {
         });
         SearchControl.add(Search);
         Search.save();
+        Ti.API.log(" START DATA ---------------------------------------");
         for (var x in SearchControl.models) {
             var show = SearchControl.models[x].get("Query");
-            Ti.API.log(show);
+            Ti.API.log(show + "is :" + x);
         }
+        Ti.API.log("END DATA ------------------------------------------");
         var ASAP = SearchControl.models[SearchControl.length - 1].get("Query");
         debugger;
-        Ti.API.log(ASAP);
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     $model = arguments[0] ? arguments[0].$model : null;

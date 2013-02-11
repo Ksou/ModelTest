@@ -58,12 +58,14 @@ SearchControl.add(Search);
 Search.save() ;
 
 //SearchControl.fetch() ; 
+Ti.API.log(' START DATA ---------------------------------------') ;
 for( var x in SearchControl.models){
 var show = SearchControl.models[x].get('Query')
-	Ti.API.log(show) ; 
+	Ti.API.log(show + 'is :' + x) ; 
 }
+Ti.API.log('END DATA ------------------------------------------') ;
 var ASAP =  SearchControl.models[SearchControl.length - 1].get('Query') ;
 debugger ; 
-Ti.API.log( ASAP ) ;	
+//Ti.API.log( ASAP ) ;	
 	
 }

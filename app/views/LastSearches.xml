@@ -1,0 +1,5 @@
+<Alloy>
+	<Window onFocus = 'UpdateForce'  >
+<TableView id = 'tableMain'/>
+	</Window>
+</Alloy>
