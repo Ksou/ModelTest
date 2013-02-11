@@ -1,0 +1,5 @@
+<Alloy>
+	<Window id = 'Win' onFocus = 'WikiChange' >
+		<WebView id = 'Wiki'/>
+	</Window>
+</Alloy>

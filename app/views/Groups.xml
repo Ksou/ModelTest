@@ -1,0 +1,5 @@
+<Alloy>
+	<Window id = 'Win' onFocus = 'TwitterGet'>
+		<WebView id ='Twitter' visible = false >
+	</Window>
+</Alloy>

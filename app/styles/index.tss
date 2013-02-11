@@ -1,0 +1,37 @@
+"Window": {
+	backgroundColor: "#fff"
+},
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000",
+	font: {
+		fontSize: 20,
+		fontFamily: 'Helvetica Neue'
+	},
+	textAlign: 'center'
+}, 
+
+"#Profile" :{
+	// headers remain constent with the exception of inbox, which uses inboxHeader.png
+//title : 'Profile',
+icon : 'images/TabBarProfile.png'	
+	
+},
+"#Settings":{
+	
+title : '' , 	
+icon : 'images/TabBarSettings.png'	
+},
+"#HomeA": {
+	title: '' ,
+	icon : 'images/TabBarHome.png'
+	
+}, 
+"#Groups" : {
+//title : 'Groups', 
+icon : 'images/TabBarGroups.png' 
+	
+	
+}
+

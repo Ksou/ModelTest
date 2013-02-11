@@ -1,0 +1,17 @@
+<Alloy>
+	<TabGroup>
+		<Tab id = "HomeA" title = 'Videos'  >
+				<Require src="Home"/>
+		</Tab>
+		<Tab id = 'Groups' title = 'Twitter' >
+			<Require src = "Groups"/>
+		</Tab>
+		<Tab id = 'Profile' title = 'About'>
+		
+		<Require src="Profile"/>
+		</Tab>
+		<Tab id = 'Settings' title = 'Settings'>
+			<Require src="Settings"/>
+		</Tab>	
+	</TabGroup>
+</Alloy>

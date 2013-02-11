@@ -1,0 +1,5 @@
+<Alloy>
+	<Window id = 'Win' onClick = 'ModelTest' >
+	<TextField id = 'Artist' onChange = 'ArtistLog' />
+	</Window>
+</Alloy>

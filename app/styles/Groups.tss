@@ -1,0 +1,31 @@
+"Window": {
+	backgroundColor: "#fff"
+},
+"Label": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000",
+	font: {
+		fontSize: 20,
+		fontFamily: 'Helvetica Neue'
+	},
+	textAlign: 'center'
+},
+'#Win':{//images/dimmiHeader.png
+	//onOpen : 'AddButton' ,
+barColor : 'Gray',	
+//backgroundImage : 'images/appBg.png',	
+
+
+},
+'#Twitter':{
+	
+url : 'https://twitter.com/DJKRUSHofficial'	
+	
+},
+'TableViewRow':{
+
+height : 'Ti.UI.Size' ,
+	
+	
+}

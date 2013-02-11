@@ -1,0 +1,6 @@
+<Alloy>
+	
+	<Window id = 'Win' onFocus = 'AddButton' >
+		<Button id = 'Inbox' visible = false />
+	</Window>
+</Alloy>
