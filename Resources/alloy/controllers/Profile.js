@@ -1,5 +1,8 @@
 function Controller() {
     function WikiChange() {
+        var ResetMe = Alloy.Collections.Searched;
+        Alloy.Globals.Artist == "Reset" && ResetMe._reset();
+        debugger;
         SearchLog();
         var FixedArist = Alloy.Globals.Artist.replace(" ", "_");
         debugger;
@@ -17,13 +20,15 @@ function Controller() {
         Ti.API.log(result);
     }
     function SearchLog() {
-        Alloy.Collections.Searched.reset();
         var SearchControl = Alloy.Collections.Searched, Search = Alloy.createModel("Searched", {
             Query: Alloy.Globals.Artist
         });
         SearchControl.add(Search);
         Search.save();
-        SearchControl.fetch();
+        for (var x in SearchControl.models) {
+            var show = SearchControl.models[x].get("Query");
+            Ti.API.log(show);
+        }
         var ASAP = SearchControl.models[SearchControl.length - 1].get("Query");
         debugger;
         Ti.API.log(ASAP);

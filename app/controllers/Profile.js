@@ -1,6 +1,15 @@
 // changed to About
 function WikiChange(){
+var ResetMe =	 Alloy.Collections.Searched; 
+if(Alloy.Globals.Artist == 'Reset' ){
+// only putting in reset resets the artist  
+ResetMe._reset () ; 
+}
+//ResetMe.update() ; 
+debugger ; 
+
 	SearchLog() ; 
+
 var FixedArist = Alloy.Globals.Artist.replace(" ","_") ; 	
 debugger ; 
 $.Wiki.setUrl('http://en.m.wikipedia.org/wiki/' + FixedArist) ;	
@@ -38,7 +47,7 @@ for(var x = 0 ; x <  Alloy.Collections.Searched.models.length ; x++){
  Alloy.Collections.Searched.destroy( Alloy.Collections.Searched.models[x]) ; 	
 }
  */
- Alloy.Collections.Searched.reset(); 
+
 	
 	var SearchControl = Alloy.Collections.Searched ;
 //	SearchControl.reset() ; 
@@ -48,8 +57,11 @@ var  Search = Alloy.createModel('Searched',{Query : (Alloy.Globals.Artist)})	;
 SearchControl.add(Search);
 Search.save() ;
 
-SearchControl.fetch() ; 
-
+//SearchControl.fetch() ; 
+for( var x in SearchControl.models){
+var show = SearchControl.models[x].get('Query')
+	Ti.API.log(show) ; 
+}
 var ASAP =  SearchControl.models[SearchControl.length - 1].get('Query') ;
 debugger ; 
 Ti.API.log( ASAP ) ;	
