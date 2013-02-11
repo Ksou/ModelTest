@@ -23,7 +23,7 @@ function GetSearches(){
 //used to study
 // so my understanding of what models are , 
 // for the most part , SQL lite databases in an very easy to use format , which means for larger apps you can pass and
-//save data with far less work then a traditional SQL exicute method 
+//save data with far less work then a traditional SQL  method 
 
 var SearchControl = Alloy.Collections.Searched ;
 
